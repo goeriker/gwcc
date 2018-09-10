@@ -4,7 +4,7 @@
   <ManagementLevel>FunctLevelMan13_0</ManagementLevel>
   <Name>plc_prog_for_SoMachine_Basic</Name>
   <FullName>C:\Users\Administrator\Documents\GWCC\plc_prog_for_SoMachine_Basic.smbp</FullName>
-  <CurrentCultureName>de-DE</CurrentCultureName>
+  <CurrentCultureName>en-GB</CurrentCultureName>
   <SoftwareConfiguration>
     <Pous>
       <ProgramOrganizationUnits>
@@ -114,97 +114,7 @@
                 <Comment />
               </InstructionLineEntity>
             </InstructionLines>
-            <Name />
-            <MainComment />
-            <Label />
-            <IsLadderSelected>true</IsLadderSelected>
-          </RungEntity>
-          <RungEntity>
-            <LadderElements>
-              <LadderEntity>
-                <ElementType>NormalContact</ElementType>
-                <Descriptor>%I0.0</Descriptor>
-                <Comment />
-                <Symbol>I_0_0</Symbol>
-                <Row>0</Row>
-                <Column>0</Column>
-                <ChosenConnection>Left, Right</ChosenConnection>
-              </LadderEntity>
-              <LadderEntity>
-                <ElementType>Coil</ElementType>
-                <Descriptor>%M0</Descriptor>
-                <Comment>Freigabe für die Pumpe</Comment>
-                <Symbol>P_IN_RELEASE</Symbol>
-                <Row>0</Row>
-                <Column>10</Column>
-                <ChosenConnection>Left</ChosenConnection>
-              </LadderEntity>
-              <LadderEntity>
-                <ElementType>Line</ElementType>
-                <Row>0</Row>
-                <Column>9</Column>
-                <ChosenConnection>Left, Right</ChosenConnection>
-              </LadderEntity>
-              <LadderEntity>
-                <ElementType>Line</ElementType>
-                <Row>0</Row>
-                <Column>8</Column>
-                <ChosenConnection>Left, Right</ChosenConnection>
-              </LadderEntity>
-              <LadderEntity>
-                <ElementType>Line</ElementType>
-                <Row>0</Row>
-                <Column>7</Column>
-                <ChosenConnection>Left, Right</ChosenConnection>
-              </LadderEntity>
-              <LadderEntity>
-                <ElementType>Line</ElementType>
-                <Row>0</Row>
-                <Column>6</Column>
-                <ChosenConnection>Left, Right</ChosenConnection>
-              </LadderEntity>
-              <LadderEntity>
-                <ElementType>Line</ElementType>
-                <Row>0</Row>
-                <Column>5</Column>
-                <ChosenConnection>Left, Right</ChosenConnection>
-              </LadderEntity>
-              <LadderEntity>
-                <ElementType>Line</ElementType>
-                <Row>0</Row>
-                <Column>4</Column>
-                <ChosenConnection>Left, Right</ChosenConnection>
-              </LadderEntity>
-              <LadderEntity>
-                <ElementType>Line</ElementType>
-                <Row>0</Row>
-                <Column>3</Column>
-                <ChosenConnection>Left, Right</ChosenConnection>
-              </LadderEntity>
-              <LadderEntity>
-                <ElementType>Line</ElementType>
-                <Row>0</Row>
-                <Column>2</Column>
-                <ChosenConnection>Left, Right</ChosenConnection>
-              </LadderEntity>
-              <LadderEntity>
-                <ElementType>Line</ElementType>
-                <Row>0</Row>
-                <Column>1</Column>
-                <ChosenConnection>Left, Right</ChosenConnection>
-              </LadderEntity>
-            </LadderElements>
-            <InstructionLines>
-              <InstructionLineEntity>
-                <InstructionLine>LD    %I0.0</InstructionLine>
-                <Comment />
-              </InstructionLineEntity>
-              <InstructionLineEntity>
-                <InstructionLine>ST    %M0</InstructionLine>
-                <Comment />
-              </InstructionLineEntity>
-            </InstructionLines>
-            <Name />
+            <Name>Initialization the variables</Name>
             <MainComment />
             <Label />
             <IsLadderSelected>true</IsLadderSelected>
@@ -294,7 +204,817 @@
                 <Comment />
               </InstructionLineEntity>
             </InstructionLines>
-            <Name />
+            <Name>Well's pump output</Name>
+            <MainComment />
+            <Label />
+            <IsLadderSelected>true</IsLadderSelected>
+          </RungEntity>
+          <RungEntity>
+            <LadderElements>
+              <LadderEntity>
+                <ElementType>NormalContact</ElementType>
+                <Descriptor>%M15</Descriptor>
+                <Comment>Befehl die PUMP_OUT zu ON/OFF zu bringen</Comment>
+                <Symbol>P_OUT_BIT</Symbol>
+                <Row>0</Row>
+                <Column>0</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Coil</ElementType>
+                <Descriptor>%Q0.1</Descriptor>
+                <Comment />
+                <Symbol />
+                <Row>0</Row>
+                <Column>10</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>8</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>7</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>6</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>5</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>4</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>3</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>2</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>1</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+            </LadderElements>
+            <InstructionLines>
+              <InstructionLineEntity>
+                <InstructionLine>LD    %M15</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>ST    %Q0.1</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+            </InstructionLines>
+            <Name>Tank's pump output</Name>
+            <MainComment />
+            <Label />
+            <IsLadderSelected>true</IsLadderSelected>
+          </RungEntity>
+          <RungEntity>
+            <LadderElements>
+              <LadderEntity>
+                <ElementType>NormalContact</ElementType>
+                <Descriptor>%M25</Descriptor>
+                <Comment>AUSgangsventil im linken Behälter</Comment>
+                <Symbol>VLV_TNK_DOWN_LEFT</Symbol>
+                <Row>0</Row>
+                <Column>0</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Coil</ElementType>
+                <Descriptor>%Q0.2</Descriptor>
+                <Comment />
+                <Symbol />
+                <Row>0</Row>
+                <Column>10</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>8</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>7</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>6</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>5</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>4</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>3</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>2</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>1</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+            </LadderElements>
+            <InstructionLines>
+              <InstructionLineEntity>
+                <InstructionLine>LD    %M25</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>ST    %Q0.2</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+            </InstructionLines>
+            <Name>Valve DOWN LEFT Output</Name>
+            <MainComment />
+            <Label />
+            <IsLadderSelected>true</IsLadderSelected>
+          </RungEntity>
+          <RungEntity>
+            <LadderElements>
+              <LadderEntity>
+                <ElementType>NormalContact</ElementType>
+                <Descriptor>%M22</Descriptor>
+                <Comment>EINgangsventil im linken Behälter</Comment>
+                <Symbol>VLV_TNK_UP_LEFT</Symbol>
+                <Row>0</Row>
+                <Column>0</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Coil</ElementType>
+                <Descriptor>%Q0.3</Descriptor>
+                <Comment />
+                <Symbol />
+                <Row>0</Row>
+                <Column>10</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>8</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>7</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>6</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>5</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>4</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>3</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>2</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>1</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+            </LadderElements>
+            <InstructionLines>
+              <InstructionLineEntity>
+                <InstructionLine>LD    %M22</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>ST    %Q0.3</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+            </InstructionLines>
+            <Name>Valve UP LEFT Output</Name>
+            <MainComment />
+            <Label />
+            <IsLadderSelected>true</IsLadderSelected>
+          </RungEntity>
+          <RungEntity>
+            <LadderElements>
+              <LadderEntity>
+                <ElementType>NormalContact</ElementType>
+                <Descriptor>%M26</Descriptor>
+                <Comment>AUSgangsventil im rechten Behälter</Comment>
+                <Symbol>VLV_TNK_DOWN_RIGHT</Symbol>
+                <Row>0</Row>
+                <Column>0</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Coil</ElementType>
+                <Descriptor>%Q0.4</Descriptor>
+                <Comment />
+                <Symbol />
+                <Row>0</Row>
+                <Column>10</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>8</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>7</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>6</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>5</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>4</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>3</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>2</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>1</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+            </LadderElements>
+            <InstructionLines>
+              <InstructionLineEntity>
+                <InstructionLine>LD    %M26</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>ST    %Q0.4</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+            </InstructionLines>
+            <Name>Valve DOWN RIGHT Output</Name>
+            <MainComment />
+            <Label />
+            <IsLadderSelected>true</IsLadderSelected>
+          </RungEntity>
+          <RungEntity>
+            <LadderElements>
+              <LadderEntity>
+                <ElementType>NormalContact</ElementType>
+                <Descriptor>%M23</Descriptor>
+                <Comment>EINgangsventil im rechten Behälter</Comment>
+                <Symbol>VLV_TNK_UP_RIGHT</Symbol>
+                <Row>0</Row>
+                <Column>0</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Coil</ElementType>
+                <Descriptor>%Q0.5</Descriptor>
+                <Comment />
+                <Symbol />
+                <Row>0</Row>
+                <Column>10</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>8</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>7</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>6</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>5</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>4</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>3</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>2</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>1</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+            </LadderElements>
+            <InstructionLines>
+              <InstructionLineEntity>
+                <InstructionLine>LD    %M23</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>ST    %Q0.5</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+            </InstructionLines>
+            <Name>Valve UP RIGHT Output</Name>
+            <MainComment />
+            <Label />
+            <IsLadderSelected>true</IsLadderSelected>
+          </RungEntity>
+          <RungEntity>
+            <LadderElements>
+              <LadderEntity>
+                <ElementType>NormalContact</ElementType>
+                <Descriptor>%I0.0</Descriptor>
+                <Comment />
+                <Symbol>I_0_0</Symbol>
+                <Row>0</Row>
+                <Column>0</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Coil</ElementType>
+                <Descriptor>%M29</Descriptor>
+                <Comment>In linkem Behälter hat das Wasser Höhepunkt erreicht</Comment>
+                <Symbol>HIGH_LVL_TNK_LEFT</Symbol>
+                <Row>0</Row>
+                <Column>10</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>1</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>2</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>3</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>4</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>5</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>6</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>7</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>8</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+            </LadderElements>
+            <InstructionLines>
+              <InstructionLineEntity>
+                <InstructionLine>LD    %I0.0</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>ST    %M29</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+            </InstructionLines>
+            <Name>HIGH LEFT Sensor Input</Name>
+            <MainComment />
+            <Label />
+            <IsLadderSelected>true</IsLadderSelected>
+          </RungEntity>
+          <RungEntity>
+            <LadderElements>
+              <LadderEntity>
+                <ElementType>NormalContact</ElementType>
+                <Descriptor>%I0.1</Descriptor>
+                <Comment />
+                <Symbol />
+                <Row>0</Row>
+                <Column>0</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Coil</ElementType>
+                <Descriptor>%M31</Descriptor>
+                <Comment>I linkem Behälter hat das Wasser den nidrigen Punkt erreicht</Comment>
+                <Symbol>LOW_LVL_TNK_LEFT</Symbol>
+                <Row>0</Row>
+                <Column>10</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>1</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>2</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>8</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>3</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>4</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>5</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>6</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>7</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+            </LadderElements>
+            <InstructionLines>
+              <InstructionLineEntity>
+                <InstructionLine>LD    %I0.1</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>ST    %M31</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+            </InstructionLines>
+            <Name>LOW LEFT Sensor Input</Name>
+            <MainComment />
+            <Label />
+            <IsLadderSelected>true</IsLadderSelected>
+          </RungEntity>
+          <RungEntity>
+            <LadderElements>
+              <LadderEntity>
+                <ElementType>NormalContact</ElementType>
+                <Descriptor>%I0.2</Descriptor>
+                <Comment />
+                <Symbol />
+                <Row>0</Row>
+                <Column>0</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Coil</ElementType>
+                <Descriptor>%M30</Descriptor>
+                <Comment>In rechtem Behälter hat das Wasser Höhepunkt erreicht</Comment>
+                <Symbol>HIGH_LVL_TNK_RIGHT</Symbol>
+                <Row>0</Row>
+                <Column>10</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>1</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>2</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>3</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>4</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>5</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>6</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>7</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>8</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+            </LadderElements>
+            <InstructionLines>
+              <InstructionLineEntity>
+                <InstructionLine>LD    %I0.2</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>ST    %M30</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+            </InstructionLines>
+            <Name>HIGH RIGHT Sensor Input</Name>
+            <MainComment />
+            <Label />
+            <IsLadderSelected>true</IsLadderSelected>
+          </RungEntity>
+          <RungEntity>
+            <LadderElements>
+              <LadderEntity>
+                <ElementType>NormalContact</ElementType>
+                <Descriptor>%I0.3</Descriptor>
+                <Comment />
+                <Symbol />
+                <Row>0</Row>
+                <Column>0</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Coil</ElementType>
+                <Descriptor>%M32</Descriptor>
+                <Comment>Im rechten Behälter hat das Wasser den nidrigen Punkt erreicht</Comment>
+                <Symbol>LOW_LVL_TNK_RIGHT</Symbol>
+                <Row>0</Row>
+                <Column>10</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>1</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>2</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>3</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>4</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>5</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>6</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>7</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>8</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+            </LadderElements>
+            <InstructionLines>
+              <InstructionLineEntity>
+                <InstructionLine>LD    %I0.3</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>ST    %M32</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+            </InstructionLines>
+            <Name>LOW RIGHT Sensor Input</Name>
             <MainComment />
             <Label />
             <IsLadderSelected>true</IsLadderSelected>
@@ -308,9 +1028,263 @@
           <RungEntity>
             <LadderElements>
               <LadderEntity>
+                <ElementType>Short</ElementType>
+                <Descriptor />
+                <Row>0</Row>
+                <Column>0</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Descriptor />
+                <Row>0</Row>
+                <Column>1</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Descriptor />
+                <Row>0</Row>
+                <Column>2</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Descriptor />
+                <Row>0</Row>
+                <Column>3</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Descriptor />
+                <Row>0</Row>
+                <Column>4</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Descriptor />
+                <Row>0</Row>
+                <Column>5</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Descriptor />
+                <Row>0</Row>
+                <Column>6</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Descriptor />
+                <Row>0</Row>
+                <Column>7</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Descriptor />
+                <Row>0</Row>
+                <Column>8</Column>
+                <ChosenConnection>Down, Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>VerticalLine</ElementType>
+                <Descriptor />
+                <Row>1</Row>
+                <Column>8</Column>
+                <ChosenConnection>Up, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Operation</ElementType>
+                <OperationExpression>%TM5.P := %MW3</OperationExpression>
+                <Row>0</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Operation</ElementType>
+                <OperationExpression>%TM6.P := %MW3</OperationExpression>
+                <Row>1</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+            </LadderElements>
+            <InstructionLines>
+              <InstructionLineEntity>
+                <InstructionLine>LD    1</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>[ %TM5.P := %MW3 ]</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>[ %TM6.P := %MW3 ]</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+            </InstructionLines>
+            <Name>Copy Values to Counter's Presets (Pumps)</Name>
+            <MainComment />
+            <Label />
+            <IsLadderSelected>true</IsLadderSelected>
+          </RungEntity>
+          <RungEntity>
+            <LadderElements>
+              <LadderEntity>
+                <ElementType>Short</ElementType>
+                <Descriptor />
+                <Row>0</Row>
+                <Column>0</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Descriptor />
+                <Row>0</Row>
+                <Column>1</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Descriptor />
+                <Row>0</Row>
+                <Column>2</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Descriptor />
+                <Row>0</Row>
+                <Column>3</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Descriptor />
+                <Row>0</Row>
+                <Column>4</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Descriptor />
+                <Row>0</Row>
+                <Column>5</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Descriptor />
+                <Row>0</Row>
+                <Column>6</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Descriptor />
+                <Row>0</Row>
+                <Column>7</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Descriptor />
+                <Row>0</Row>
+                <Column>8</Column>
+                <ChosenConnection>Down, Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>VerticalLine</ElementType>
+                <Descriptor />
+                <Row>1</Row>
+                <Column>8</Column>
+                <ChosenConnection>Up, Down, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>VerticalLine</ElementType>
+                <Descriptor />
+                <Row>2</Row>
+                <Column>8</Column>
+                <ChosenConnection>Up, Down, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>VerticalLine</ElementType>
+                <Descriptor />
+                <Row>3</Row>
+                <Column>8</Column>
+                <ChosenConnection>Up, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Operation</ElementType>
+                <OperationExpression>%TM9.P := %MW2</OperationExpression>
+                <Row>0</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Operation</ElementType>
+                <OperationExpression>%TM8.P := %MW2</OperationExpression>
+                <Row>1</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Operation</ElementType>
+                <OperationExpression>%TM7.P := %MW2</OperationExpression>
+                <Row>2</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Operation</ElementType>
+                <OperationExpression>%TM4.P := %MW2</OperationExpression>
+                <Row>3</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>None</ElementType>
+                <Row>1</Row>
+                <Column>3</Column>
+                <ChosenConnection>None</ChosenConnection>
+              </LadderEntity>
+            </LadderElements>
+            <InstructionLines>
+              <InstructionLineEntity>
+                <InstructionLine>LD    1</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>[ %TM9.P := %MW2 ]</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>[ %TM8.P := %MW2 ]</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>[ %TM7.P := %MW2 ]</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>[ %TM4.P := %MW2 ]</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+            </InstructionLines>
+            <Name>Copy Values to Counter's Presets (Valves)</Name>
+            <MainComment />
+            <Label />
+            <IsLadderSelected>true</IsLadderSelected>
+          </RungEntity>
+          <RungEntity>
+            <LadderElements>
+              <LadderEntity>
                 <ElementType>Coil</ElementType>
                 <Descriptor>%M0</Descriptor>
-                <Comment>Freigabe für die Pumpe</Comment>
+                <Comment>Freigabe für die Brunnen-Pumpe</Comment>
                 <Symbol>P_IN_RELEASE</Symbol>
                 <Row>0</Row>
                 <Column>10</Column>
@@ -414,8 +1388,8 @@
               <LadderEntity>
                 <ElementType>Timer</ElementType>
                 <Descriptor>%TM6</Descriptor>
-                <Comment />
-                <Symbol />
+                <Comment>Pause zwischen dem Erreichen HIGH-Level und AUSschalten des Ventils</Comment>
+                <Symbol>TON_VLV_UP_PMP_IN</Symbol>
                 <Row>0</Row>
                 <Column>7</Column>
                 <ChosenConnection>Left</ChosenConnection>
@@ -460,7 +1434,7 @@
               </InstructionLineEntity>
             </InstructionLines>
             <Name>Pump_IN goes ON/OFF</Name>
-            <MainComment>Pumpe IN darf eingeschaltet werden</MainComment>
+            <MainComment>Pumpe IN darf EIN- bzw. AUSgeschaltet werden</MainComment>
             <Label />
             <IsLadderSelected>true</IsLadderSelected>
           </RungEntity>
@@ -469,7 +1443,7 @@
               <LadderEntity>
                 <ElementType>Coil</ElementType>
                 <Descriptor>%M11</Descriptor>
-                <Comment />
+                <Comment>Freigabe für die Behälter-Pumpe</Comment>
                 <Symbol>P_OUT_RELEASE</Symbol>
                 <Row>0</Row>
                 <Column>10</Column>
@@ -532,7 +1506,7 @@
               <LadderEntity>
                 <ElementType>NormalContact</ElementType>
                 <Descriptor>%M28</Descriptor>
-                <Comment />
+                <Comment>Voraussetzung für die AN/AUS der Pump_OUT</Comment>
                 <Symbol>OUT_WITH_PRESSURE</Symbol>
                 <Row>0</Row>
                 <Column>1</Column>
@@ -541,8 +1515,8 @@
               <LadderEntity>
                 <ElementType>Timer</ElementType>
                 <Descriptor>%TM5</Descriptor>
-                <Comment />
-                <Symbol />
+                <Comment>Pause zwischen AUSschalten des Ventils und der Pumpe</Comment>
+                <Symbol>TON_VLV_DOWN_PMP_OUT</Symbol>
                 <Row>0</Row>
                 <Column>7</Column>
                 <ChosenConnection>Left, Right</ChosenConnection>
@@ -587,7 +1561,7 @@
               </InstructionLineEntity>
             </InstructionLines>
             <Name>Pump_OUT goes ON/OFF</Name>
-            <MainComment>Pumpe IN darf eingeschaltet werden</MainComment>
+            <MainComment>Pumpe OUT darf EIN- bzw. AUSgeschaltet werden</MainComment>
             <Label />
             <IsLadderSelected>true</IsLadderSelected>
           </RungEntity>
@@ -644,7 +1618,7 @@
               <LadderEntity>
                 <ElementType>NormalContact</ElementType>
                 <Descriptor>%M33</Descriptor>
-                <Comment />
+                <Comment>Befüllen des linken Behälter ist erwünscht</Comment>
                 <Symbol>FILL_TNK_LEFT</Symbol>
                 <Row>0</Row>
                 <Column>1</Column>
@@ -662,7 +1636,7 @@
               <LadderEntity>
                 <ElementType>NegatedContact</ElementType>
                 <Descriptor>%M29</Descriptor>
-                <Comment>Im linken Behälter hat das Wasser Höhepunk erreicht</Comment>
+                <Comment>In linkem Behälter hat das Wasser Höhepunkt erreicht</Comment>
                 <Symbol>HIGH_LVL_TNK_LEFT</Symbol>
                 <Row>0</Row>
                 <Column>0</Column>
@@ -683,7 +1657,7 @@
                 <Comment />
               </InstructionLineEntity>
             </InstructionLines>
-            <Name>Close Valve for Left Tank</Name>
+            <Name>Valve (UP_LEFT) will be opened</Name>
             <MainComment />
             <Label />
             <IsLadderSelected>true</IsLadderSelected>
@@ -693,11 +1667,11 @@
               <LadderEntity>
                 <ElementType>NormalContact</ElementType>
                 <Descriptor>%M29</Descriptor>
-                <Comment>Im linken Behälter hat das Wasser Höhepunk erreicht</Comment>
+                <Comment>In linkem Behälter hat das Wasser Höhepunkt erreicht</Comment>
                 <Symbol>HIGH_LVL_TNK_LEFT</Symbol>
                 <Row>0</Row>
                 <Column>0</Column>
-                <ChosenConnection>Left, Right</ChosenConnection>
+                <ChosenConnection>Down, Left, Right</ChosenConnection>
               </LadderEntity>
               <LadderEntity>
                 <ElementType>ResetCoil</ElementType>
@@ -748,7 +1722,7 @@
                 <ElementType>Timer</ElementType>
                 <Descriptor>%TM8</Descriptor>
                 <Comment />
-                <Symbol />
+                <Symbol>TON_VLV_UP_LEFT</Symbol>
                 <Row>0</Row>
                 <Column>7</Column>
                 <ChosenConnection>Left</ChosenConnection>
@@ -759,6 +1733,15 @@
                 <Column>9</Column>
                 <ChosenConnection>Left, Right</ChosenConnection>
               </LadderEntity>
+              <LadderEntity>
+                <ElementType>NegatedContact</ElementType>
+                <Descriptor>%M33</Descriptor>
+                <Comment>Befüllen des linken Behälter ist erwünscht</Comment>
+                <Symbol>FILL_TNK_LEFT</Symbol>
+                <Row>1</Row>
+                <Column>0</Column>
+                <ChosenConnection>Up, Left</ChosenConnection>
+              </LadderEntity>
             </LadderElements>
             <InstructionLines>
               <InstructionLineEntity>
@@ -767,6 +1750,10 @@
               </InstructionLineEntity>
               <InstructionLineEntity>
                 <InstructionLine>LD    %M29</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>ORN   %M33</InstructionLine>
                 <Comment />
               </InstructionLineEntity>
               <InstructionLineEntity>
@@ -790,7 +1777,7 @@
                 <Comment />
               </InstructionLineEntity>
             </InstructionLines>
-            <Name>Close Valve for Left Tank</Name>
+            <Name>Valve (UP_LEFT) will be closed</Name>
             <MainComment />
             <Label />
             <IsLadderSelected>true</IsLadderSelected>
@@ -800,19 +1787,10 @@
               <LadderEntity>
                 <ElementType>NegatedContact</ElementType>
                 <Descriptor>%M30</Descriptor>
-                <Comment>Im linken Behälter hat das Wasser Höhepunk erreicht</Comment>
+                <Comment>In rechtem Behälter hat das Wasser Höhepunkt erreicht</Comment>
                 <Symbol>HIGH_LVL_TNK_RIGHT</Symbol>
                 <Row>0</Row>
                 <Column>0</Column>
-                <ChosenConnection>Left, Right</ChosenConnection>
-              </LadderEntity>
-              <LadderEntity>
-                <ElementType>NegatedContact</ElementType>
-                <Descriptor>%M34</Descriptor>
-                <Comment />
-                <Symbol>FILL_TNK_RIGHT</Symbol>
-                <Row>0</Row>
-                <Column>1</Column>
                 <ChosenConnection>Left, Right</ChosenConnection>
               </LadderEntity>
               <LadderEntity>
@@ -872,6 +1850,15 @@
                 <Column>10</Column>
                 <ChosenConnection>Left</ChosenConnection>
               </LadderEntity>
+              <LadderEntity>
+                <ElementType>NormalContact</ElementType>
+                <Descriptor>%M34</Descriptor>
+                <Comment>Befüllen des rechten Behälter ist erwünscht</Comment>
+                <Symbol>FILL_TNK_RIGHT</Symbol>
+                <Row>0</Row>
+                <Column>1</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
             </LadderElements>
             <InstructionLines>
               <InstructionLineEntity>
@@ -879,7 +1866,7 @@
                 <Comment />
               </InstructionLineEntity>
               <InstructionLineEntity>
-                <InstructionLine>ANDN  %M34</InstructionLine>
+                <InstructionLine>AND   %M34</InstructionLine>
                 <Comment />
               </InstructionLineEntity>
               <InstructionLineEntity>
@@ -887,7 +1874,7 @@
                 <Comment />
               </InstructionLineEntity>
             </InstructionLines>
-            <Name />
+            <Name>Valve (UP_RIGHT) will be opened</Name>
             <MainComment />
             <Label />
             <IsLadderSelected>true</IsLadderSelected>
@@ -897,11 +1884,11 @@
               <LadderEntity>
                 <ElementType>NormalContact</ElementType>
                 <Descriptor>%M30</Descriptor>
-                <Comment>Im linken Behälter hat das Wasser Höhepunk erreicht</Comment>
+                <Comment>In rechtem Behälter hat das Wasser Höhepunkt erreicht</Comment>
                 <Symbol>HIGH_LVL_TNK_RIGHT</Symbol>
                 <Row>0</Row>
                 <Column>0</Column>
-                <ChosenConnection>Left, Right</ChosenConnection>
+                <ChosenConnection>Down, Left, Right</ChosenConnection>
               </LadderEntity>
               <LadderEntity>
                 <ElementType>ResetCoil</ElementType>
@@ -958,10 +1945,19 @@
                 <ElementType>Timer</ElementType>
                 <Descriptor>%TM7</Descriptor>
                 <Comment />
-                <Symbol />
+                <Symbol>TON_VLV_UP_RIGHT</Symbol>
                 <Row>0</Row>
                 <Column>7</Column>
                 <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>NegatedContact</ElementType>
+                <Descriptor>%M34</Descriptor>
+                <Comment>Befüllen des rechten Behälter ist erwünscht</Comment>
+                <Symbol>FILL_TNK_RIGHT</Symbol>
+                <Row>1</Row>
+                <Column>0</Column>
+                <ChosenConnection>Up, Left</ChosenConnection>
               </LadderEntity>
             </LadderElements>
             <InstructionLines>
@@ -971,6 +1967,10 @@
               </InstructionLineEntity>
               <InstructionLineEntity>
                 <InstructionLine>LD    %M30</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>ORN   %M34</InstructionLine>
                 <Comment />
               </InstructionLineEntity>
               <InstructionLineEntity>
@@ -994,7 +1994,7 @@
                 <Comment />
               </InstructionLineEntity>
             </InstructionLines>
-            <Name />
+            <Name>Valve (UP_RIGHT) will be closed</Name>
             <MainComment />
             <Label />
             <IsLadderSelected>true</IsLadderSelected>
@@ -1049,7 +2049,7 @@
               <LadderEntity>
                 <ElementType>NegatedContact</ElementType>
                 <Descriptor>%M31</Descriptor>
-                <Comment />
+                <Comment>I linkem Behälter hat das Wasser den nidrigen Punkt erreicht</Comment>
                 <Symbol>LOW_LVL_TNK_LEFT</Symbol>
                 <Row>0</Row>
                 <Column>0</Column>
@@ -1058,7 +2058,7 @@
               <LadderEntity>
                 <ElementType>NormalContact</ElementType>
                 <Descriptor>%M35</Descriptor>
-                <Comment />
+                <Comment>Ablassen des linken Behälter ist erwünscht</Comment>
                 <Symbol>DRAIN_TNK_LEFT</Symbol>
                 <Row>0</Row>
                 <Column>1</Column>
@@ -1091,7 +2091,7 @@
                 <Comment />
               </InstructionLineEntity>
             </InstructionLines>
-            <Name />
+            <Name>Valve (DOWN_LEFT) will be opened</Name>
             <MainComment />
             <Label />
             <IsLadderSelected>true</IsLadderSelected>
@@ -1101,11 +2101,11 @@
               <LadderEntity>
                 <ElementType>NormalContact</ElementType>
                 <Descriptor>%M31</Descriptor>
-                <Comment />
+                <Comment>I linkem Behälter hat das Wasser den nidrigen Punkt erreicht</Comment>
                 <Symbol>LOW_LVL_TNK_LEFT</Symbol>
                 <Row>0</Row>
                 <Column>0</Column>
-                <ChosenConnection>Left, Right</ChosenConnection>
+                <ChosenConnection>Down, Left, Right</ChosenConnection>
               </LadderEntity>
               <LadderEntity>
                 <ElementType>ResetCoil</ElementType>
@@ -1149,8 +2149,8 @@
               <LadderEntity>
                 <ElementType>Timer</ElementType>
                 <Descriptor>%TM4</Descriptor>
-                <Comment />
-                <Symbol />
+                <Comment>Pause zwischen AUSschalten des Ventils und der Pumpe</Comment>
+                <Symbol>TON_VLV_DOWN_LEFT</Symbol>
                 <Row>0</Row>
                 <Column>7</Column>
                 <ChosenConnection>Left, Right</ChosenConnection>
@@ -1168,10 +2168,13 @@
                 <ChosenConnection>Left, Right</ChosenConnection>
               </LadderEntity>
               <LadderEntity>
-                <ElementType>None</ElementType>
+                <ElementType>NegatedContact</ElementType>
+                <Descriptor>%M35</Descriptor>
+                <Comment>Ablassen des linken Behälter ist erwünscht</Comment>
+                <Symbol>DRAIN_TNK_LEFT</Symbol>
                 <Row>1</Row>
-                <Column>5</Column>
-                <ChosenConnection>None</ChosenConnection>
+                <Column>0</Column>
+                <ChosenConnection>Up, Left</ChosenConnection>
               </LadderEntity>
             </LadderElements>
             <InstructionLines>
@@ -1181,6 +2184,10 @@
               </InstructionLineEntity>
               <InstructionLineEntity>
                 <InstructionLine>LD    %M31</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>ORN   %M35</InstructionLine>
                 <Comment />
               </InstructionLineEntity>
               <InstructionLineEntity>
@@ -1204,22 +2211,13 @@
                 <Comment />
               </InstructionLineEntity>
             </InstructionLines>
-            <Name />
+            <Name>Valve (DOWN_LEFT) will be closed</Name>
             <MainComment />
             <Label />
             <IsLadderSelected>true</IsLadderSelected>
           </RungEntity>
           <RungEntity>
             <LadderElements>
-              <LadderEntity>
-                <ElementType>Coil</ElementType>
-                <Descriptor>%M26</Descriptor>
-                <Comment>AUSgangsventil im rechten Behälter</Comment>
-                <Symbol>VLV_TNK_DOWN_RIGHT</Symbol>
-                <Row>0</Row>
-                <Column>10</Column>
-                <ChosenConnection>Left</ChosenConnection>
-              </LadderEntity>
               <LadderEntity>
                 <ElementType>Line</ElementType>
                 <Row>0</Row>
@@ -1271,7 +2269,7 @@
               <LadderEntity>
                 <ElementType>NegatedContact</ElementType>
                 <Descriptor>%M32</Descriptor>
-                <Comment />
+                <Comment>Im rechten Behälter hat das Wasser den nidrigen Punkt erreicht</Comment>
                 <Symbol>LOW_LVL_TNK_RIGHT</Symbol>
                 <Row>0</Row>
                 <Column>0</Column>
@@ -1280,11 +2278,20 @@
               <LadderEntity>
                 <ElementType>NormalContact</ElementType>
                 <Descriptor>%M36</Descriptor>
-                <Comment />
+                <Comment>Ablassen des rechten Behälter ist erwünscht</Comment>
                 <Symbol>DRAIN_TNK_RIGHT</Symbol>
                 <Row>0</Row>
                 <Column>1</Column>
                 <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>SetCoil</ElementType>
+                <Descriptor>%M26</Descriptor>
+                <Comment>AUSgangsventil im rechten Behälter</Comment>
+                <Symbol>VLV_TNK_DOWN_RIGHT</Symbol>
+                <Row>0</Row>
+                <Column>10</Column>
+                <ChosenConnection>Left</ChosenConnection>
               </LadderEntity>
             </LadderElements>
             <InstructionLines>
@@ -1297,11 +2304,11 @@
                 <Comment />
               </InstructionLineEntity>
               <InstructionLineEntity>
-                <InstructionLine>ST    %M26</InstructionLine>
+                <InstructionLine>S     %M26</InstructionLine>
                 <Comment />
               </InstructionLineEntity>
             </InstructionLines>
-            <Name />
+            <Name>Valve (DOWN_RIGHT) will be opened</Name>
             <MainComment />
             <Label />
             <IsLadderSelected>true</IsLadderSelected>
@@ -1311,11 +2318,11 @@
               <LadderEntity>
                 <ElementType>NormalContact</ElementType>
                 <Descriptor>%M32</Descriptor>
-                <Comment />
+                <Comment>Im rechten Behälter hat das Wasser den nidrigen Punkt erreicht</Comment>
                 <Symbol>LOW_LVL_TNK_RIGHT</Symbol>
                 <Row>0</Row>
                 <Column>0</Column>
-                <ChosenConnection>Left, Right</ChosenConnection>
+                <ChosenConnection>Down, Left, Right</ChosenConnection>
               </LadderEntity>
               <LadderEntity>
                 <ElementType>Line</ElementType>
@@ -1363,7 +2370,7 @@
                 <ElementType>Timer</ElementType>
                 <Descriptor>%TM9</Descriptor>
                 <Comment />
-                <Symbol />
+                <Symbol>TON_VLV_DOWN_RIGHT</Symbol>
                 <Row>0</Row>
                 <Column>7</Column>
                 <ChosenConnection>Left, Right</ChosenConnection>
@@ -1377,6 +2384,15 @@
                 <Column>10</Column>
                 <ChosenConnection>Left</ChosenConnection>
               </LadderEntity>
+              <LadderEntity>
+                <ElementType>NegatedContact</ElementType>
+                <Descriptor>%M36</Descriptor>
+                <Comment>Ablassen des rechten Behälter ist erwünscht</Comment>
+                <Symbol>DRAIN_TNK_RIGHT</Symbol>
+                <Row>1</Row>
+                <Column>0</Column>
+                <ChosenConnection>Up, Left</ChosenConnection>
+              </LadderEntity>
             </LadderElements>
             <InstructionLines>
               <InstructionLineEntity>
@@ -1385,6 +2401,10 @@
               </InstructionLineEntity>
               <InstructionLineEntity>
                 <InstructionLine>LD    %M32</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>ORN   %M36</InstructionLine>
                 <Comment />
               </InstructionLineEntity>
               <InstructionLineEntity>
@@ -1408,7 +2428,7 @@
                 <Comment />
               </InstructionLineEntity>
             </InstructionLines>
-            <Name />
+            <Name>Valve (DOWN_RIGHT) will be closed</Name>
             <MainComment />
             <Label />
             <IsLadderSelected>true</IsLadderSelected>
@@ -1424,7 +2444,7 @@
               <LadderEntity>
                 <ElementType>NormalContact</ElementType>
                 <Descriptor>%M0</Descriptor>
-                <Comment>Freigabe für die Pumpe</Comment>
+                <Comment>Freigabe für die Brunnen-Pumpe</Comment>
                 <Symbol>P_IN_RELEASE</Symbol>
                 <Row>0</Row>
                 <Column>0</Column>
@@ -1542,7 +2562,7 @@
               <LadderEntity>
                 <ElementType>NormalContact</ElementType>
                 <Descriptor>%M11</Descriptor>
-                <Comment />
+                <Comment>Freigabe für die Behälter-Pumpe</Comment>
                 <Symbol>P_OUT_RELEASE</Symbol>
                 <Row>0</Row>
                 <Column>0</Column>
@@ -1551,7 +2571,7 @@
               <LadderEntity>
                 <ElementType>NegatedContact</ElementType>
                 <Descriptor>%M12</Descriptor>
-                <Comment />
+                <Comment>Sicherheitspause nach AUSschalten der PUMP_OUT, Sekunden </Comment>
                 <Symbol>P_OUT_DELAY</Symbol>
                 <Row>0</Row>
                 <Column>1</Column>
@@ -1560,7 +2580,7 @@
               <LadderEntity>
                 <ElementType>NegatedContact</ElementType>
                 <Descriptor>%M16</Descriptor>
-                <Comment />
+                <Comment>bei =1 muss die Pumpe ausgeschaltet sein</Comment>
                 <Symbol>P_OUT_TIMEOUT</Symbol>
                 <Row>0</Row>
                 <Column>2</Column>
@@ -1569,7 +2589,7 @@
               <LadderEntity>
                 <ElementType>NegatedContact</ElementType>
                 <Descriptor>%M13</Descriptor>
-                <Comment />
+                <Comment>Der Motor wird überlastet</Comment>
                 <Symbol>P_OUT_OVERLOAD</Symbol>
                 <Row>0</Row>
                 <Column>3</Column>
@@ -1578,7 +2598,7 @@
               <LadderEntity>
                 <ElementType>NegatedContact</ElementType>
                 <Descriptor>%M14</Descriptor>
-                <Comment />
+                <Comment>Überhitzung des Motors</Comment>
                 <Symbol>P_OUT_OVERHEAT</Symbol>
                 <Row>0</Row>
                 <Column>4</Column>
@@ -1587,7 +2607,7 @@
               <LadderEntity>
                 <ElementType>Coil</ElementType>
                 <Descriptor>%M15</Descriptor>
-                <Comment />
+                <Comment>Befehl die PUMP_OUT zu ON/OFF zu bringen</Comment>
                 <Symbol>P_OUT_BIT</Symbol>
                 <Row>0</Row>
                 <Column>10</Column>
@@ -1882,7 +2902,7 @@
               <LadderEntity>
                 <ElementType>Coil</ElementType>
                 <Descriptor>%M12</Descriptor>
-                <Comment />
+                <Comment>Sicherheitspause nach AUSschalten der PUMP_OUT, Sekunden </Comment>
                 <Symbol>P_OUT_DELAY</Symbol>
                 <Row>0</Row>
                 <Column>10</Column>
@@ -1933,7 +2953,7 @@
               <LadderEntity>
                 <ElementType>FallingEdge</ElementType>
                 <Descriptor>%M15</Descriptor>
-                <Comment />
+                <Comment>Befehl die PUMP_OUT zu ON/OFF zu bringen</Comment>
                 <Symbol>P_OUT_BIT</Symbol>
                 <Row>0</Row>
                 <Column>0</Column>
@@ -2202,7 +3222,7 @@
               <LadderEntity>
                 <ElementType>NormalContact</ElementType>
                 <Descriptor>%M15</Descriptor>
-                <Comment />
+                <Comment>Befehl die PUMP_OUT zu ON/OFF zu bringen</Comment>
                 <Symbol>P_OUT_BIT</Symbol>
                 <Row>0</Row>
                 <Column>0</Column>
@@ -2211,7 +3231,7 @@
               <LadderEntity>
                 <ElementType>Coil</ElementType>
                 <Descriptor>%M16</Descriptor>
-                <Comment />
+                <Comment>bei =1 muss die Pumpe ausgeschaltet sein</Comment>
                 <Symbol>P_OUT_TIMEOUT</Symbol>
                 <Row>0</Row>
                 <Column>10</Column>
@@ -2339,7 +3359,7 @@
               <LadderEntity>
                 <ElementType>NormalContact</ElementType>
                 <Descriptor>%M8</Descriptor>
-                <Comment />
+                <Comment>Reset of counter for PUMP_IN</Comment>
                 <Symbol>C_PIN_RESET</Symbol>
                 <Row>0</Row>
                 <Column>0</Column>
@@ -2348,7 +3368,7 @@
               <LadderEntity>
                 <ElementType>NormalContact</ElementType>
                 <Descriptor>%M9</Descriptor>
-                <Comment />
+                <Comment>Set of counter for PUMP_IN</Comment>
                 <Symbol>C_PIN_SET</Symbol>
                 <Row>1</Row>
                 <Column>0</Column>
@@ -2357,7 +3377,7 @@
               <LadderEntity>
                 <ElementType>NormalContact</ElementType>
                 <Descriptor>%M10</Descriptor>
-                <Comment />
+                <Comment>Counterwise of counter for PUMP_IN</Comment>
                 <Symbol>C_PIN_CD</Symbol>
                 <Row>3</Row>
                 <Column>0</Column>
@@ -2366,7 +3386,7 @@
               <LadderEntity>
                 <ElementType>Coil</ElementType>
                 <Descriptor>%M6</Descriptor>
-                <Comment />
+                <Comment>Error of counter for PUMP_IN</Comment>
                 <Symbol>C_PIN_ERROR</Symbol>
                 <Row>0</Row>
                 <Column>10</Column>
@@ -2417,7 +3437,7 @@
               <LadderEntity>
                 <ElementType>Coil</ElementType>
                 <Descriptor>%M7</Descriptor>
-                <Comment />
+                <Comment>Preset of counter for PUMP_IN</Comment>
                 <Symbol>C_PIN_PRESET</Symbol>
                 <Row>1</Row>
                 <Column>10</Column>
@@ -2450,7 +3470,7 @@
               <LadderEntity>
                 <ElementType>Coil</ElementType>
                 <Descriptor>%M6</Descriptor>
-                <Comment />
+                <Comment>Error of counter for PUMP_IN</Comment>
                 <Symbol>C_PIN_ERROR</Symbol>
                 <Row>2</Row>
                 <Column>10</Column>
@@ -2610,7 +3630,7 @@
               <LadderEntity>
                 <ElementType>NormalContact</ElementType>
                 <Descriptor>%M19</Descriptor>
-                <Comment />
+                <Comment>Reset of counter for PUMP_OUT</Comment>
                 <Symbol>C_POUT_RESET</Symbol>
                 <Row>0</Row>
                 <Column>0</Column>
@@ -2619,7 +3639,7 @@
               <LadderEntity>
                 <ElementType>NormalContact</ElementType>
                 <Descriptor>%M20</Descriptor>
-                <Comment />
+                <Comment>Set of counter for PUMP_OUT</Comment>
                 <Symbol>C_POUT_SET</Symbol>
                 <Row>1</Row>
                 <Column>0</Column>
@@ -2628,7 +3648,7 @@
               <LadderEntity>
                 <ElementType>NormalContact</ElementType>
                 <Descriptor>%M15</Descriptor>
-                <Comment />
+                <Comment>Befehl die PUMP_OUT zu ON/OFF zu bringen</Comment>
                 <Symbol>P_OUT_BIT</Symbol>
                 <Row>2</Row>
                 <Column>0</Column>
@@ -2637,7 +3657,7 @@
               <LadderEntity>
                 <ElementType>NormalContact</ElementType>
                 <Descriptor>%M21</Descriptor>
-                <Comment />
+                <Comment>Counterwise of counter for PUMP_OUT</Comment>
                 <Symbol>C_POUT_CD</Symbol>
                 <Row>3</Row>
                 <Column>0</Column>
@@ -2646,7 +3666,7 @@
               <LadderEntity>
                 <ElementType>Coil</ElementType>
                 <Descriptor>%M17</Descriptor>
-                <Comment />
+                <Comment>Error of counter for PUMP_OUT</Comment>
                 <Symbol>C_POUT_ERROR</Symbol>
                 <Row>0</Row>
                 <Column>10</Column>
@@ -2697,7 +3717,7 @@
               <LadderEntity>
                 <ElementType>Coil</ElementType>
                 <Descriptor>%M18</Descriptor>
-                <Comment />
+                <Comment>Preset of counter for PUMP_OUT</Comment>
                 <Symbol>C_POUT_PRESET</Symbol>
                 <Row>1</Row>
                 <Column>10</Column>
@@ -2730,7 +3750,7 @@
               <LadderEntity>
                 <ElementType>Coil</ElementType>
                 <Descriptor>%M17</Descriptor>
-                <Comment />
+                <Comment>Error of counter for PUMP_OUT</Comment>
                 <Symbol>C_POUT_ERROR</Symbol>
                 <Row>2</Row>
                 <Column>10</Column>
@@ -2982,6 +4002,51 @@
           </WatchListItemEntity>
         </WatchListItemEntities>
       </WatchListEntity>
+      <WatchListEntity>
+        <Name>Valves</Name>
+        <WatchListItemEntities>
+          <WatchListItemEntity>
+            <Address>%M22</Address>
+            <IsTraced>false</IsTraced>
+            <ValueRepresentation>BoolNumeric</ValueRepresentation>
+          </WatchListItemEntity>
+          <WatchListItemEntity>
+            <Address>%M23</Address>
+            <IsTraced>false</IsTraced>
+            <ValueRepresentation>BoolNumeric</ValueRepresentation>
+          </WatchListItemEntity>
+          <WatchListItemEntity>
+            <Address>%M25</Address>
+            <IsTraced>false</IsTraced>
+            <ValueRepresentation>BoolNumeric</ValueRepresentation>
+          </WatchListItemEntity>
+          <WatchListItemEntity>
+            <Address>%M26</Address>
+            <IsTraced>false</IsTraced>
+            <ValueRepresentation>BoolNumeric</ValueRepresentation>
+          </WatchListItemEntity>
+          <WatchListItemEntity>
+            <Address>%M33</Address>
+            <IsTraced>false</IsTraced>
+            <ValueRepresentation>BoolNumeric</ValueRepresentation>
+          </WatchListItemEntity>
+          <WatchListItemEntity>
+            <Address>%M34</Address>
+            <IsTraced>false</IsTraced>
+            <ValueRepresentation>BoolNumeric</ValueRepresentation>
+          </WatchListItemEntity>
+          <WatchListItemEntity>
+            <Address>%M35</Address>
+            <IsTraced>false</IsTraced>
+            <ValueRepresentation>BoolNumeric</ValueRepresentation>
+          </WatchListItemEntity>
+          <WatchListItemEntity>
+            <Address>%M36</Address>
+            <IsTraced>false</IsTraced>
+            <ValueRepresentation>BoolNumeric</ValueRepresentation>
+          </WatchListItemEntity>
+        </WatchListItemEntities>
+      </WatchListEntity>
     </WatchLists>
     <CustomSymbols />
     <ConstantWordsMemoryAllocation />
@@ -3012,7 +4077,7 @@
         <Address>%M0</Address>
         <Index>0</Index>
         <Symbol>P_IN_RELEASE</Symbol>
-        <Comment>Freigabe für die Pumpe</Comment>
+        <Comment>Freigabe für die Brunnen-Pumpe</Comment>
       </MemoryBit>
       <MemoryBit>
         <Address>%M1</Address>
@@ -3048,81 +4113,97 @@
         <Address>%M6</Address>
         <Index>6</Index>
         <Symbol>C_PIN_ERROR</Symbol>
+        <Comment>Error of counter for PUMP_IN</Comment>
       </MemoryBit>
       <MemoryBit>
         <Address>%M7</Address>
         <Index>7</Index>
         <Symbol>C_PIN_PRESET</Symbol>
+        <Comment>Preset of counter for PUMP_IN</Comment>
       </MemoryBit>
       <MemoryBit>
         <Address>%M8</Address>
         <Index>8</Index>
         <Symbol>C_PIN_RESET</Symbol>
+        <Comment>Reset of counter for PUMP_IN</Comment>
       </MemoryBit>
       <MemoryBit>
         <Address>%M9</Address>
         <Index>9</Index>
         <Symbol>C_PIN_SET</Symbol>
+        <Comment>Set of counter for PUMP_IN</Comment>
       </MemoryBit>
       <MemoryBit>
         <Address>%M10</Address>
         <Index>10</Index>
         <Symbol>C_PIN_CD</Symbol>
+        <Comment>Counterwise of counter for PUMP_IN</Comment>
       </MemoryBit>
       <MemoryBit>
         <Address>%M11</Address>
         <Index>11</Index>
         <Symbol>P_OUT_RELEASE</Symbol>
+        <Comment>Freigabe für die Behälter-Pumpe</Comment>
       </MemoryBit>
       <MemoryBit>
         <Address>%M12</Address>
         <Index>12</Index>
         <Symbol>P_OUT_DELAY</Symbol>
+        <Comment>Sicherheitspause nach AUSschalten der PUMP_OUT, Sekunden </Comment>
       </MemoryBit>
       <MemoryBit>
         <Address>%M13</Address>
         <Index>13</Index>
         <Symbol>P_OUT_OVERLOAD</Symbol>
+        <Comment>Der Motor wird überlastet</Comment>
       </MemoryBit>
       <MemoryBit>
         <Address>%M14</Address>
         <Index>14</Index>
         <Symbol>P_OUT_OVERHEAT</Symbol>
+        <Comment>Überhitzung des Motors</Comment>
       </MemoryBit>
       <MemoryBit>
         <Address>%M15</Address>
         <Index>15</Index>
         <Symbol>P_OUT_BIT</Symbol>
+        <Comment>Befehl die PUMP_OUT zu ON/OFF zu bringen</Comment>
       </MemoryBit>
       <MemoryBit>
         <Address>%M16</Address>
         <Index>16</Index>
         <Symbol>P_OUT_TIMEOUT</Symbol>
+        <Comment>bei =1 muss die Pumpe ausgeschaltet sein</Comment>
       </MemoryBit>
       <MemoryBit>
         <Address>%M17</Address>
         <Index>17</Index>
         <Symbol>C_POUT_ERROR</Symbol>
+        <Comment>Error of counter for PUMP_OUT</Comment>
       </MemoryBit>
       <MemoryBit>
         <Address>%M18</Address>
         <Index>18</Index>
         <Symbol>C_POUT_PRESET</Symbol>
+        <Comment>Preset of counter for PUMP_OUT</Comment>
       </MemoryBit>
       <MemoryBit>
         <Address>%M19</Address>
         <Index>19</Index>
         <Symbol>C_POUT_RESET</Symbol>
+        <Comment>Reset of counter for PUMP_OUT</Comment>
       </MemoryBit>
       <MemoryBit>
         <Address>%M20</Address>
         <Index>20</Index>
         <Symbol>C_POUT_SET</Symbol>
+        <Comment>Set of counter for PUMP_OUT</Comment>
       </MemoryBit>
       <MemoryBit>
         <Address>%M21</Address>
         <Index>21</Index>
         <Symbol>C_POUT_CD</Symbol>
+        <Comment>Counterwise of counter for PUMP_OUT</Comment>
       </MemoryBit>
       <MemoryBit>
         <Address>%M22</Address>
@@ -3158,53 +4239,61 @@
         <Address>%M27</Address>
         <Index>27</Index>
         <Symbol>VLV_OUT_EXTENTION</Symbol>
+        <Comment>Zusätztlicher Ventil for Niederdruck-Leitung</Comment>
       </MemoryBit>
       <MemoryBit>
         <Address>%M28</Address>
         <Index>28</Index>
         <Symbol>OUT_WITH_PRESSURE</Symbol>
+        <Comment>Voraussetzung für die AN/AUS der Pump_OUT</Comment>
       </MemoryBit>
       <MemoryBit>
         <Address>%M29</Address>
         <Index>29</Index>
         <Symbol>HIGH_LVL_TNK_LEFT</Symbol>
-        <Comment>Im linken Behälter hat das Wasser Höhepunk erreicht</Comment>
+        <Comment>In linkem Behälter hat das Wasser Höhepunkt erreicht</Comment>
       </MemoryBit>
       <MemoryBit>
         <Address>%M30</Address>
         <Index>30</Index>
         <Symbol>HIGH_LVL_TNK_RIGHT</Symbol>
-        <Comment>Im linken Behälter hat das Wasser Höhepunk erreicht</Comment>
+        <Comment>In rechtem Behälter hat das Wasser Höhepunkt erreicht</Comment>
       </MemoryBit>
       <MemoryBit>
         <Address>%M31</Address>
         <Index>31</Index>
         <Symbol>LOW_LVL_TNK_LEFT</Symbol>
+        <Comment>I linkem Behälter hat das Wasser den nidrigen Punkt erreicht</Comment>
       </MemoryBit>
       <MemoryBit>
         <Address>%M32</Address>
         <Index>32</Index>
         <Symbol>LOW_LVL_TNK_RIGHT</Symbol>
+        <Comment>Im rechten Behälter hat das Wasser den nidrigen Punkt erreicht</Comment>
       </MemoryBit>
       <MemoryBit>
         <Address>%M33</Address>
         <Index>33</Index>
         <Symbol>FILL_TNK_LEFT</Symbol>
+        <Comment>Befüllen des linken Behälter ist erwünscht</Comment>
       </MemoryBit>
       <MemoryBit>
         <Address>%M34</Address>
         <Index>34</Index>
         <Symbol>FILL_TNK_RIGHT</Symbol>
+        <Comment>Befüllen des rechten Behälter ist erwünscht</Comment>
       </MemoryBit>
       <MemoryBit>
         <Address>%M35</Address>
         <Index>35</Index>
         <Symbol>DRAIN_TNK_LEFT</Symbol>
+        <Comment>Ablassen des linken Behälter ist erwünscht</Comment>
       </MemoryBit>
       <MemoryBit>
         <Address>%M36</Address>
         <Index>36</Index>
         <Symbol>DRAIN_TNK_RIGHT</Symbol>
+        <Comment>Ablassen des rechten Behälter ist erwünscht</Comment>
       </MemoryBit>
     </MemoryBits>
     <SystemBits>
@@ -4263,6 +5352,18 @@
         <Symbol>PUMP_TIMEOUT_VALUE</Symbol>
         <Comment>Wie lange darf die Pumpe ununterbrochen laufen</Comment>
       </MemoryWord>
+      <MemoryWord>
+        <Address>%MW2</Address>
+        <Index>2</Index>
+        <Symbol>VALVE_DELAY_VALUE</Symbol>
+        <Comment>Die Verzögerung zwischen dem Erreichen HIGH/LOW level des Wasserspiegels im Behälter und dem Ausschalten entsprechendes Ventils.</Comment>
+      </MemoryWord>
+      <MemoryWord>
+        <Address>%MW3</Address>
+        <Index>3</Index>
+        <Symbol>VLV_PMP_DELAY_VALUE</Symbol>
+        <Comment>Die Verzögerung zwischen der Auschaltung des Ventils und der Pumpe.</Comment>
+      </MemoryWord>
     </MemoryWords>
     <MemoryDoubleWords />
     <MemoryFloats />
@@ -4307,37 +5408,46 @@
       <TimerTM>
         <Address>%TM4</Address>
         <Index>4</Index>
+        <Symbol>TON_VLV_DOWN_LEFT</Symbol>
+        <Comment>Pause zwischen AUSschalten des Ventils und der Pumpe</Comment>
         <Preset>10</Preset>
         <Base>OneSecond</Base>
       </TimerTM>
       <TimerTM>
         <Address>%TM5</Address>
         <Index>5</Index>
+        <Symbol>TON_VLV_DOWN_PMP_OUT</Symbol>
+        <Comment>Pause zwischen AUSschalten des Ventils und der Pumpe</Comment>
         <Preset>2</Preset>
         <Base>OneSecond</Base>
       </TimerTM>
       <TimerTM>
         <Address>%TM6</Address>
         <Index>6</Index>
+        <Symbol>TON_VLV_UP_PMP_IN</Symbol>
+        <Comment>Pause zwischen dem Erreichen HIGH-Level und AUSschalten des Ventils</Comment>
         <Preset>2</Preset>
         <Base>OneSecond</Base>
       </TimerTM>
       <TimerTM>
         <Address>%TM7</Address>
         <Index>7</Index>
-        <Preset>20</Preset>
+        <Symbol>TON_VLV_UP_RIGHT</Symbol>
+        <Preset>10</Preset>
         <Base>OneSecond</Base>
       </TimerTM>
       <TimerTM>
         <Address>%TM8</Address>
         <Index>8</Index>
-        <Preset>20</Preset>
+        <Symbol>TON_VLV_UP_LEFT</Symbol>
+        <Preset>10</Preset>
         <Base>OneSecond</Base>
       </TimerTM>
       <TimerTM>
         <Address>%TM9</Address>
         <Index>9</Index>
-        <Preset>20</Preset>
+        <Symbol>TON_VLV_DOWN_RIGHT</Symbol>
+        <Preset>10</Preset>
         <Base>OneSecond</Base>
       </TimerTM>
     </Timers>
@@ -5023,7 +6133,7 @@
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>69b6b9d2-d0fd-4563-9b62-8d1afcd2b97e</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
@@ -5033,52 +6143,52 @@
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>42a052b2-9011-43d9-afad-ef21f029f456</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>aea3563c-0068-4c00-9c4d-51510baad430</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>37b5fd42-cf25-444b-9cde-cc9d25bf94e2</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>d330070e-7dc9-42ef-8bb7-f275f516a876</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>bca05041-ab3f-4d4d-8e96-3cc4f0c0e312</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>59094978-d9ae-4c38-8902-bc4d7643629b</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>ccb4a0a7-506f-4fb6-8749-0eb797d68560</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>8a465604-e636-471c-b9fe-e1f5e6ffd12f</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>c81dc261-e679-4924-a3e4-057c65ecd545</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>cb0b7126-eb01-495f-a864-cfbeb238366b</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
@@ -5098,242 +6208,242 @@
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>39d581e0-6e75-4b67-afaf-ba65df773496</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>0370c3bf-7dae-4ff7-ae69-45e819ee3b37</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>694a6a79-a869-412a-8b6c-c173c2f98d6c</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>aaf9dd8c-fab1-4451-8904-df2232dd9855</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>46cb67ab-2c35-4e94-b5d1-03f85dab3bb1</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>ab2d76df-d727-4004-b52f-68e46ac55abc</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>944e7a8b-1c2d-453f-947a-de753ad2aa85</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>54226aac-cbfb-4078-b097-52dcfd50f3aa</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>944e7a8a-1c2d-453f-947a-de753ad2aa85</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>947eb035-9fb2-4f85-921a-b603ee99e2cc</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>f0032994-f4ad-4781-887b-7a4d8d479cf9</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>af377bc8-a2a4-467e-a3c2-f14e21c2da96</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>fdf2ce14-72cc-4124-9f27-63d3ccbe4636</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>3695062f-ed3f-48f8-ac1a-7d85f74ae1b3</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>8fd4a034-5f72-4703-8733-c704924aa283</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>357e4fa1-8ffb-4962-a4a8-c7aea67f5415</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>c3bc4073-c3a7-484e-b5ef-07787bdcd794</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>88a4d2d1-5b9b-4efd-80a8-b0920becea51</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>0130364c-40ae-4f59-94d9-8caf526825df</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>7d613b59-a6c3-4d82-9328-e6abf4e700d3</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>0ea20fef-7773-467a-811e-cfc772d2834a</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>17af4405-e8be-4cce-ad32-097a233ad43e</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>fa6e7477-f2df-4f89-b073-6d9f72fa513e</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>f07f8389-5eee-4d2b-a70d-3eba63956848</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>174f5c36-6c9e-4c89-956d-b271e26bde58</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>7a4d628f-ffbe-4a8c-a25d-f34b57e0f0a1</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>9570c631-824b-4296-b524-26344ec6de56</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>be0bcad2-bf9d-48b6-9767-4ca3ce6a7ebc</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>3865ebf8-8d2e-45bf-8547-71ff33dbfc7b</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>cd444344-4817-4461-94c5-e9c96049b013</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>799a3736-5e18-48ca-8d46-21d947fc867d</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>8d1789d9-7308-44d5-a6c6-745889042069</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>e5118382-11ff-4ad0-86f9-adefca49a3d6</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>77e7fae5-c5bf-4ba1-b085-13c7f54bf529</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>25ac9823-dd0b-48cd-ac6d-a5e23a4a977e</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>5bcef39c-96e1-4ee0-8006-2407f1b232b7</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>762e10f9-9d9a-47cf-b8f7-179530a69edf</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>fb86ed72-e726-43c7-b38a-71ec8ae5d4d0</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>5107754f-5655-459b-954a-07e44ce14dce</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>a67f9207-5b35-4c83-b9e9-228219945b28</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>0d16cb21-31f9-4f2b-ad3d-7f0251d8a74a</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>944f13d7-96a2-44d7-9107-27b9cc134f35</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>a93bd1ad-885a-48aa-b7b6-400c1083edb8</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>7225ffe9-96a4-4f68-8d06-951a6acbdd6f</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>f5693adf-6181-4db8-a4b4-fc368f3cc4fe</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>b4aa8ca2-66b1-4a58-8459-71ba0f148b3f</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>434d0494-1711-4d06-a4ba-e4a298774923</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>0789a932-0cf8-4752-b6dc-85c165b0bb5f</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
@@ -5363,22 +6473,22 @@
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>eda12000-d3bf-49df-b43e-5c63da5b8aa1</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>d649f87e-d8b6-41ca-8510-4c900a2bf102</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>174fd120-c0e7-4012-b9e6-e856365044e5</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>d00afc20-ebcb-4623-ac07-825cbe543b37</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
@@ -5388,12 +6498,12 @@
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>ee8e8d2c-3eda-4f5d-9493-9f71916ece2e</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
       <SubReportConfiguration>
         <Id>dbc28d49-d051-40f1-a526-cd5bd83cd283</Id>
-        <IsActivated>true</IsActivated>
+        <IsActivated>false</IsActivated>
         <PrintOnlyUsedData>false</PrintOnlyUsedData>
       </SubReportConfiguration>
     </SubReportConfigurations>
